@@ -38,12 +38,17 @@ for rodada in range(1, total_de_chutes + 1):
     else:
         if(maior):
             print("Você errou! O seu chute foi maior que o número secreto!")
+            if(rodada == total_de_chutes):
+                print("O número secreto era {}. Você fez {} pontos!".format(numero_secreto, pontos))
         elif(menor):
             print("Você errou! O seu chute foi menor que o número secreto!")
+            if (rodada == total_de_chutes):
+                print("O número secreto era {}. Você fez {} pontos!".format(numero_secreto, pontos))
         pontos_perdidos = abs(numero_secreto - chute)
         pontos = pontos - pontos_perdidos
 
 
 print("Fim do Jogo!")
+
 
 
